@@ -6,6 +6,11 @@ sources:
     schema: mk_mall
     tables:
       - name: orders
+        config:
+          freshness:
+            warn_after: {count: 1, period: day}
+        loaded_at_field: o_orderdate::timestamp
       - name: regions
       - name: nations
-      
+      - name: customers
+
